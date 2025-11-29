@@ -19,40 +19,4 @@ html, body, #app {
 
 header {
   font-weight: 800;
-}
-
-.c-main-grid {
-  display: grid;
-  grid-template-rows: auto minmax(300px, 1fr) auto;
-  grid-template-columns: [side] 295px auto;
-  grid-template-areas:
-    "header  header" 
-    "sidebar main  " 
-    "footer  footer";
-  justify-content: stretch;
-  align-content: stretch;
-  transition: all 0.3s ease-in-out;
-}
-
-.c-main-grid--wosidebar {
-  grid-template-columns: [side] 25px auto;
-}
-
-.c-main-header {
-  grid-area: header;
-}
-
-.c-main {
-  grid-area: main;
-  display: grid;
-  grid-template-rows: [title] auto 1fr;
-}
-
-.c-main-footer {
-  grid-area: footer;
-}
-
-.c-sidebar {
-  grid-area: sidebar;
-  cursor: pointer;
-}
+}hore: 🏗️ use flexbox layout with sidebar toggle)
