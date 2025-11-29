@@ -1,0 +1,58 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+header {
+  font-weight: 800;
+}
+
+.c-main-grid {
+  display: grid;
+  grid-template-rows: auto minmax(300px, 1fr) auto;
+  grid-template-columns: [side] 295px auto;
+  grid-template-areas:
+    "header  header" 
+    "sidebar main  " 
+    "footer  footer";
+  justify-content: stretch;
+  align-content: stretch;
+  transition: all 0.3s ease-in-out;
+}
+
+.c-main-grid--wosidebar {
+  grid-template-columns: [side] 25px auto;
+}
+
+.c-main-header {
+  grid-area: header;
+}
+
+.c-main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: [title] auto 1fr;
+}
+
+.c-main-footer {
+  grid-area: footer;
+}
+
+.c-sidebar {
+  grid-area: sidebar;
+  cursor: pointer;
+}
